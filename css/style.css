@@ -3,7 +3,7 @@ body {
 }
 
 .section1 {
-    background-image: url(../image/home.jpeg);
+    background-image: url(../image/home.webp);
     background-size: cover;
     background-position: 30% 50%;
     min-height: 380px;
@@ -105,7 +105,7 @@ span {
     background-color: #b3d1ad;
 }
 
-h5 {
+h5:not(.section1 h5) {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -303,6 +303,7 @@ br {
         transition: 1s;
         width: 50%;
         -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%);
+        mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%);
     }
 
     .content:hover .model {
@@ -311,7 +312,7 @@ br {
         z-index: 1;
     }
 
-    .content .content-overlay {
+    .content-overlay {
         background: rgba(0, 0, 0, 0.7);
         position: absolute;
         left: 0;
@@ -322,6 +323,9 @@ br {
         transition: 0.3s;
         border-radius: 5%;
     }
+
+
+    /* ******** Products ******/
 
     .content:hover .content-overlay {
         opacity: 1
@@ -336,7 +340,6 @@ br {
 
     .content:hover {
         transform: scale(1.5);
-        z-index: 6;
     }
 
     .content-details {
@@ -368,33 +371,6 @@ br {
     }
 
 
-
-    /*
-    .cat-img.Otto {
-        
-        z-index: 4;
-    }
-
-    .cat-img.Sokko {
-        margin-left: 500px;
-        width: 300px;
-        z-index: 3;
-    }
-
-    .cat-img.Rup {
-        margin-left: 600px;
-        z-index: 2;
-    }
-
-    .cat-img.Tig {
-        margin-left: 800px;
-        z-index: 1;
-    }
-    .cat-img:hover {
-        transform: rotate(5deg) scale(1.1);
-        z-index: 5;
-    }
-*/
     /********* Products ******/
 
     .products img {
